@@ -66,18 +66,18 @@ atom-text-editor .search-results .marker.current-result .region,
 
 .comment {
   color: @light-gray;
+  font-weight: 300;
 }
 
 .keyword {
-  color: @syntax-text-color;
+  color: @blue;
 
   // &.control {
   //   color: @syntax-text-color;
   // }
 
   &.operator {
-    // color: @syntax-text-color;
-    font-weight: 500;
+    color: @light-orange;
   }
 
   // &.other.special-method {
@@ -90,46 +90,46 @@ atom-text-editor .search-results .marker.current-result .region,
 
   &.elements {
     color: @cyan;
-    font-weight: 500;
   }
 }
 
 .storage {
-  color: @syntax-text-color;
+  color: @blue;
 }
 
 .constant {
-  color: @cyan;
-  font-weight: 500;
+  color: @syntax-text-color;
 
   &.character.escape {
-    color: @cyan;
-    font-weight: 500;
+    color: @syntax-text-color;
   }
 
-  &.numeric {
-    color: @cyan;
-    font-weight: 500;
+  &.numeric,
+  &.boolean {
+    color: @purple;
   }
 
   &.other.color {
-    color: @cyan;
-    font-weight: 500;
+    color: @syntax-text-color;
   }
 
   &.other.symbol {
-    color: @cyan;
-    font-weight: 500;
+    color: @syntax-text-color;
+  }
+
+  &.css,
+  &.scss {
+    color: @syntax-text-color;
+    font-weight: 700;
   }
 }
 
 .variable {
-  color: @cyan;
-  font-weight: 500;
+  color: @syntax-text-color;
+  font-weight: 700;
 
   &.interpolation {
-    color: @cyan;
-    font-weight: 500;
+    color: @syntax-text-color;
   }
 
   &.parameter.function {
@@ -143,11 +143,10 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .string {
-  color: @syntax-text-color;
-
+  color: @green;
 
   &.regexp {
-    color: @syntax-text-color;
+    color: @orange;
 
     .source.ruby.embedded {
       color: @syntax-text-color;
@@ -155,11 +154,22 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.other.link {
-    color: @syntax-text-color;
+    color: @green;
+  }
+
+  &.css,
+  &.scss {
+    color: @light-orange;
+  }
+
+  &.html {
+    color: @blue;
   }
 }
 
 .punctuation {
+  font-weight: 300;
+
   &.definition {
     &.comment {
       color: @light-gray;
@@ -179,7 +189,6 @@ atom-text-editor .search-results .marker.current-result .region,
 
     &.bold {
       color: @syntax-text-color;
-      font-weight: 500;
     }
 
     &.italic {
@@ -197,62 +206,59 @@ atom-text-editor .search-results .marker.current-result .region,
 .support {
   &.class,
   &.function {
-    color: @cyan;
-    font-weight: 500;
+    color: @purple;
   }
 
   // &.function  {
   //   color: @cyan;
-  //   font-weight: 500;
 
     // &.any-method {
     //   color: @cyan;
-    //   font-weight: 500;
     // }
   // }
   &.property-name {
-    font-weight: 500;
+    color: @purple;
+  }
+  &.property-value {
+    font-weight: 700;
   }
 }
 
 .entity {
   &.name.function {
-    color: @cyan;
-    font-weight: 500;
+    color: @red;
   }
   &.name.type {
-    color: @cyan;
-    font-weight: 500;
+    color: @red;
     // text-decoration: underline;
+  }
+  &.name.method {
+    color: @syntax-text-color;
+    font-weight: 700;
   }
 
   &.other.inherited-class {
-    color: @cyan;
-    font-weight: 500;
+    color: @syntax-text-color;
+    font-weight: 700;
   }
   &.name.class, &.name.type.class {
-    color: @cyan;
-    font-weight: 500;
+    color: @syntax-text-color;
+    font-weight: 700;
   }
 
   &.name.section {
-    color: @cyan;
-    font-weight: 500;
+    color: @syntax-text-color;
   }
 
   &.name.tag {
-    color: @cyan;
-    font-weight: 500;
-    // text-decoration: underline;
+    color: @purple;
   }
 
   &.other.attribute-name {
-    color: @cyan;
-    font-weight: 500;
+    color: @green;
 
     &.id {
-      color: @cyan;
-      font-weight: 500;
+      color: @blue;
     }
   }
 }
@@ -277,6 +283,11 @@ atom-text-editor .search-results .marker.current-result .region,
   &.separator {
     background-color: @very-light-gray;
     color: @syntax-text-color;
+  }
+
+  &.css,
+  &.scss {
+    font-weight: 700;
   }
 }
 
@@ -331,7 +342,9 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 }
 
-atom-text-editor[mini] .scroll-view,
-:host([mini]) .scroll-view {
-  padding-left: 1px;
+atom-text-editor {
+  &[mini] .scroll-view,
+  :host([mini]) .scroll-view {
+    padding-left: 1px;
+  }
 }
