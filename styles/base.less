@@ -91,6 +91,10 @@ atom-text-editor .search-results .marker.current-result .region,
   &.elements {
     color: @cyan;
   }
+
+  &.control {
+    font-weight: 700;
+  }
 }
 
 .storage {
@@ -120,7 +124,7 @@ atom-text-editor .search-results .marker.current-result .region,
   &.css,
   &.scss {
     color: @syntax-text-color;
-    font-weight: 700;
+    // font-weight: 700;
   }
 }
 
@@ -160,6 +164,7 @@ atom-text-editor .search-results .marker.current-result .region,
   &.css,
   &.scss {
     color: @light-orange;
+    font-weight: 400;
   }
 
   &.html {
@@ -218,8 +223,13 @@ atom-text-editor .search-results .marker.current-result .region,
   // }
   &.property-name {
     color: @purple;
+    font-weight: 700;
   }
   &.property-value {
+    // font-weight: 700;
+  }
+  &.css,
+  &.scss {
     font-weight: 700;
   }
 }
@@ -252,10 +262,12 @@ atom-text-editor .search-results .marker.current-result .region,
 
   &.name.tag {
     color: @purple;
+    font-weight: 700;
   }
 
   &.other.attribute-name {
     color: @green;
+    font-weight: 700;
 
     &.id {
       color: @blue;
@@ -287,7 +299,7 @@ atom-text-editor .search-results .marker.current-result .region,
 
   &.css,
   &.scss {
-    font-weight: 700;
+    // font-weight: 700;
   }
 }
 
