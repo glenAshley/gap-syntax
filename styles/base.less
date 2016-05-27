@@ -146,16 +146,16 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .variable {
-  // color: @syntax-text-color;
+  color: @syntax-text-color;
   font-weight: 700;
 
-  &.interpolation {
-    color: @syntax-text-color;
-  }
-
-  &.parameter.function {
-    color: @syntax-text-color;
-  }
+  // &.interpolation {
+  //   color: @syntax-text-color;
+  // }
+  //
+  // &.parameter.function {
+  //   color: @syntax-text-color;
+  // }
 
   &.this {
     font-weight: 400;
@@ -337,6 +337,11 @@ atom-text-editor .search-results .marker.current-result .region,
   &.separator {
     background-color: @very-light-gray;
     color: @syntax-text-color;
+  }
+
+  &.tag.jsx {
+    color: @green;
+    font-weight: 700;
   }
 
   &.css,
