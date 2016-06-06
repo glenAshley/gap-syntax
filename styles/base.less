@@ -1,6 +1,11 @@
 @import "syntax-variables";
 @import "fonts";
 
+.bracket-matcher .region {
+  background-color: @syntax-selection-color;
+  border-bottom: none;
+}
+
 atom-text-editor, :host {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
@@ -12,6 +17,7 @@ atom-text-editor, :host {
   }
 
   .indent-guide {
+    // color: @syntax-indent-guide-color;
     color: @syntax-indent-guide-color;
   }
 
@@ -75,8 +81,8 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .keyword {
+  color: @syntax-text-color;
   font-weight: 400;
-  // color: @blue;
 
   // &.control {
   //   color: @syntax-text-color;
@@ -106,16 +112,16 @@ atom-text-editor .search-results .marker.current-result .region,
   // }
 }
 
-// .storage {
-//   color: @blue;
-//   font-weight: 700;
-//
-//   &.function,
-//   &.class {
-//     color: @syntax-text-color;
-//     font-weight: 400;
-//   }
-// }
+.storage {
+  color: @syntax-text-color;
+  font-weight: 400;
+  //
+  // &.function,
+  // &.class {
+  //   color: @syntax-text-color;
+  //   font-weight: 400;
+  // }
+}
 
 .constant {
   // color: @syntax-text-color;
@@ -162,7 +168,8 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 }
 
-.invalid.illegal {
+.invalid {
+// .invalid.illegal {
   background-color: @red;
   color: @syntax-background-color;
 }
@@ -192,7 +199,7 @@ atom-text-editor .search-results .marker.current-result .region,
   // }
 
   &.html,
-  &.quoted {
+  &.quoted.double {
     color: @blue;
 
     &.css, &.scss {
@@ -202,6 +209,7 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .punctuation {
+  color: @syntax-text-color;
   font-weight: 400;
 
   &.definition {
@@ -209,27 +217,27 @@ atom-text-editor .search-results .marker.current-result .region,
       color: @light-gray;
     }
 
-    &.string,
-    &.variable,
-    &.parameters,
-    &.array {
-      color: @syntax-text-color;
-      font-weight: 400;
-    }
-
-    &.heading,
-    &.identity {
-      color: @syntax-text-color;
-    }
-
-    &.bold {
-      color: @syntax-text-color;
-    }
-
-    &.italic {
-      color: @syntax-text-color;
-      font-style: italic;
-    }
+    // &.string,
+    // &.variable,
+    // &.parameters,
+    // &.array {
+    //   color: @syntax-text-color;
+    //   font-weight: 400;
+    // }
+    //
+    // &.heading,
+    // &.identity {
+    //   color: @syntax-text-color;
+    // }
+    //
+    // &.bold {
+    //   color: @syntax-text-color;
+    // }
+    //
+    // &.italic {
+    //   color: @syntax-text-color;
+    //   font-style: italic;
+    // }
   }
 
   &.section.embedded {
