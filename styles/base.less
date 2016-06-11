@@ -1,6 +1,10 @@
 @import "syntax-variables";
 @import "fonts";
 
+@regular: 400;
+@bold: 500;
+@italicSize: .93em;
+
 .bracket-matcher .region {
   background-color: @syntax-selection-color;
   border-bottom: none;
@@ -10,6 +14,7 @@ atom-text-editor, :host {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
   font-family: SourceCodePro;
+  font-weight: @regular;
   -webkit-font-smoothing: antialiased;
 
   .wrap-guide {
@@ -17,7 +22,6 @@ atom-text-editor, :host {
   }
 
   .indent-guide {
-    // color: @syntax-indent-guide-color;
     color: @syntax-indent-guide-color;
   }
 
@@ -77,55 +81,30 @@ atom-text-editor .search-results .marker.current-result .region,
 
 .comment {
   color: @light-gray;
-  font-weight: 400;
+  font-weight: @regular;
 }
 
 .keyword {
   color: @syntax-text-color;
-  font-weight: 400;
-
-  // &.control {
-  //   color: @syntax-text-color;
-  // }
-
-  // &.operator {
-  //   color: @light-orange;
-  //   font-weight: 700;
-  // }
-
-  // &.other.special-method {
-  //   color: @syntax-text-color;
-  // }
+  font-weight: @regular;
 
   &.unit {
     color: @green;
-    font-weight: 700;
+    font-weight: @bold;
   }
 
   &.elements {
     color: @cyan;
-    font-weight: 700;
+    font-weight: @bold;
   }
-
-  // &.control {
-  //   font-weight: 700;
-  // }
 }
 
 .storage {
   color: @syntax-text-color;
-  font-weight: 400;
-  //
-  // &.function,
-  // &.class {
-  //   color: @syntax-text-color;
-  //   font-weight: 400;
-  // }
+  font-weight: @regular;
 }
 
 .constant {
-  // color: @syntax-text-color;
-
   &.character.escape {
     color: @syntax-text-color;
   }
@@ -133,7 +112,7 @@ atom-text-editor .search-results .marker.current-result .region,
   &.numeric,
   &.boolean {
     color: @purple;
-    font-weight: 700;
+    font-weight: @bold;
   }
 
   &.other.color {
@@ -147,56 +126,26 @@ atom-text-editor .search-results .marker.current-result .region,
   &.css,
   &.scss {
     color: @syntax-text-color;
-    // font-weight: 700;
   }
 }
 
 .variable {
   color: @syntax-text-color;
-  font-weight: 700;
-
-  // &.interpolation {
-  //   color: @syntax-text-color;
-  // }
-  //
-  // &.parameter.function {
-  //   color: @syntax-text-color;
-  // }
+  font-weight: @bold;
 
   &.this {
-    font-weight: 400;
+    font-weight: @regular;
   }
 }
 
 .invalid {
-// .invalid.illegal {
   background-color: @red;
   color: @syntax-background-color;
 }
 
 .string {
   color: @green;
-  font-weight: 700;
-
-  // &.regexp {
-  //   color: @orange;
-  //   font-weight: 700;
-  //
-  //   .source.ruby.embedded {
-  //     color: @syntax-text-color;
-  //   }
-  // }
-
-  // &.other.link {
-  //   color: @green;
-  //   font-weight: 700;
-  // }
-
-  // &.css,
-  // &.scss {
-  //   color: @light-orange;
-  //   font-weight: 700;
-  // }
+  font-weight: @bold;
 
   &.html,
   &.quoted.double {
@@ -210,34 +159,12 @@ atom-text-editor .search-results .marker.current-result .region,
 
 .punctuation {
   color: @syntax-text-color;
-  font-weight: 400;
+  font-weight: @regular;
 
   &.definition {
     &.comment {
       color: @light-gray;
     }
-
-    // &.string,
-    // &.variable,
-    // &.parameters,
-    // &.array {
-    //   color: @syntax-text-color;
-    //   font-weight: 400;
-    // }
-    //
-    // &.heading,
-    // &.identity {
-    //   color: @syntax-text-color;
-    // }
-    //
-    // &.bold {
-    //   color: @syntax-text-color;
-    // }
-    //
-    // &.italic {
-    //   color: @syntax-text-color;
-    //   font-style: italic;
-    // }
   }
 
   &.section.embedded {
@@ -249,51 +176,41 @@ atom-text-editor .search-results .marker.current-result .region,
   &.class,
   &.function {
     color: @purple;
-    font-weight: 700;
+    font-weight: @bold;
   }
 
-  // &.function  {
-  //   color: @cyan;
-
-    // &.any-method {
-    //   color: @cyan;
-    // }
-  // }
   &.property-name {
     color: @purple;
-    font-weight: 700;
+    font-weight: @bold;
   }
-  // &.property-value {
-  //   font-weight: 700;
-  // }
+
   &.css,
   &.scss {
-    font-weight: 700;
+    font-weight: @bold;
   }
 }
 
 .entity {
   &.name.function {
     color: @blue;
-    font-weight: 700;
+    font-weight: @bold;
   }
   &.name.type {
     color: @blue;
-    font-weight: 700;
-    // text-decoration: underline;
+    font-weight: @bold;
   }
   &.name.method {
     color: @blue;
-    font-weight: 700;
+    font-weight: @bold;
   }
 
   &.other.inherited-class {
     color: @syntax-text-color;
-    font-weight: 700;
+    font-weight: @bold;
   }
   &.name.class, &.name.type.class {
     color: @syntax-text-color;
-    font-weight: 700;
+    font-weight: @bold;
   }
 
   &.name.section {
@@ -302,7 +219,7 @@ atom-text-editor .search-results .marker.current-result .region,
 
   &.name.tag {
     color: @purple;
-    font-weight: 700;
+    font-weight: @bold;
 
     &.css, &.scss {
       color: @blue;
@@ -311,7 +228,7 @@ atom-text-editor .search-results .marker.current-result .region,
 
   &.other.attribute-name {
     color: @green;
-    font-weight: 700;
+    font-weight: @bold;
     font-style: italic;
 
     &.id {
@@ -349,12 +266,12 @@ atom-text-editor .search-results .marker.current-result .region,
 
   &.tag.jsx {
     color: @green;
-    font-weight: 700;
+    font-weight: @bold;
   }
 
   &.css,
   &.scss {
-    font-weight: 700;
+    font-weight: @bold;
   }
 }
 
@@ -365,48 +282,48 @@ atom-text-editor .search-results .marker.current-result .region,
 .markup {
   &.bold {
     color: @orange;
-    font-weight: 700;
+    font-weight: @bold;
   }
 
   &.changed {
     color: @purple;
-    font-weight: 700;
+    font-weight: @bold;
   }
 
   &.deleted {
     color: @red;
-    font-weight: 700;
+    font-weight: @bold;
   }
 
   &.italic {
     color: @purple;
     font-style: italic;
-    font-weight: 700;
+    font-weight: @bold;
   }
 
   &.heading .punctuation.definition.heading {
     color: @blue;
-    font-weight: 700;
+    font-weight: @bold;
   }
 
   &.inserted {
     color: @green;
-    font-weight: 700;
+    font-weight: @bold;
   }
 
   &.list {
     color: @red;
-    font-weight: 700;
+    font-weight: @bold;
   }
 
   &.quote {
     color: @orange;
-    font-weight: 700;
+    font-weight: @bold;
   }
 
   &.raw.inline {
     color: @green;
-    font-weight: 700;
+    font-weight: @bold;
   }
 }
 
@@ -414,7 +331,7 @@ atom-text-editor .search-results .marker.current-result .region,
   -webkit-font-smoothing: auto;
   &.heading {
     color: @green;
-    font-weight: 700;
+    font-weight: @bold;
   }
 }
 
