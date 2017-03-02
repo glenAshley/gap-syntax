@@ -5,6 +5,27 @@
 @bold: 500;
 @italicSize: .93em;
 
+
+// centre in the page
+atom-text-editor {
+  .editor-contents--private {
+    &::after {
+      content: "";
+      flex: 1;
+    }
+  }
+
+  .gutter-container {
+    flex: 1;
+  }
+
+  .scroll-view {
+    width: 100%;
+    max-width: 50em;
+    flex-basis: auto;
+  }
+}
+
 .bracket-matcher .region {
   background-color: @syntax-selection-color;
   border-bottom: none;
