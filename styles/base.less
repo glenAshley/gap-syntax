@@ -84,8 +84,14 @@ atom-text-editor {
     color: @syntax-cursor-color;
   }
 
-  .selection .region {
-    background-color: @syntax-selection-color;
+  .selection {
+    .region {
+      background-color: @syntax-selection-color;
+    }
+    &.flash .region {
+      background-color: @flash;
+      color: @canvas;
+    }
   }
 }
 
