@@ -3,28 +3,7 @@
 
 @regular: 400;
 @bold: 500;
-@italicSize: .93em;
-
-
-// centre in the page
-atom-text-editor {
-  .editor-contents--private {
-    &::after {
-      content: "";
-      flex: 1;
-    }
-  }
-
-  .gutter-container {
-    flex: 1;
-  }
-
-  .scroll-view {
-    width: 100%;
-    max-width: 62em;
-    flex-basis: auto;
-  }
-}
+@italicSize: 0.93em;
 
 .bracket-matcher .region {
   background-color: @syntax-selection-color;
@@ -171,7 +150,8 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   &.syntax--html {
     color: @blue;
 
-    &.syntax--css, &.syntax--scss {
+    &.syntax--css,
+    &.syntax--scss {
       color: @green;
     }
   }
@@ -228,7 +208,8 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
     color: @syntax-text-color;
     font-weight: @bold;
   }
-  &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
+  &.syntax--name.syntax--class,
+  &.syntax--name.syntax--type.syntax--class {
     color: @syntax-text-color;
     font-weight: @bold;
   }
@@ -241,7 +222,8 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
     color: @purple;
     font-weight: @bold;
 
-    &.syntax--css, &.syntax--scss {
+    &.syntax--css,
+    &.syntax--scss {
       color: @blue;
     }
   }
@@ -256,7 +238,8 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
       color: @blue;
     }
 
-    &.syntax--css, &.syntax--scss {
+    &.syntax--css,
+    &.syntax--scss {
       color: @blue;
       font-style: normal;
       font-size: 1em;
