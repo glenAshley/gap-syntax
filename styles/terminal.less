@@ -1,0 +1,44 @@
+@import "syntax-variables";
+
+html .terminal {
+  color: @dark-gray;
+  font-family: SourceCodePro;
+  font-weight: 400;
+
+  .xterm-selection {
+    opacity: 1;
+    z-index: auto;
+
+    div {
+      background-color: @selection;
+    }
+  }
+
+  .xterm-color-1 {
+    color: @red;
+  }
+
+  .xterm-color-2 {
+    color: @green;
+  }
+
+  .xterm-color-3 {
+    color: @orange;
+  }
+
+  .xterm-color-4 {
+    color: @blue;
+  }
+
+  .xterm-color-5 {
+    color: @purple;
+  }
+
+  .xterm-color-6 {
+    color: @cyan;
+  }
+
+  .xterm-color-7 {
+    color: @canvas;
+  }
+}
