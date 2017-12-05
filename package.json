@@ -1,9 +1,12 @@
 {
   "name": "gap-syntax",
   "theme": "syntax",
-  "version": "0.4.5",
+  "version": "0.5.0",
   "description": "A light theme with subtle colours",
-  "keywords": ["syntax", "theme"],
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
   "repository": "git@github.com:glenAshley/gap-syntax.git",
   "license": "MIT",
   "engines": {
